@@ -1,0 +1,15 @@
+D:\workspace\C#\QuanAn\QuanAn\bin\Debug\QuanAn.exe.config
+D:\workspace\C#\QuanAn\QuanAn\bin\Debug\QuanAn.exe
+D:\workspace\C#\QuanAn\QuanAn\bin\Debug\QuanAn.pdb
+D:\workspace\C#\QuanAn\QuanAn\obj\Debug\QuanAn.csproj.AssemblyReference.cache
+D:\workspace\C#\QuanAn\QuanAn\obj\Debug\QuanAn.Properties.Resources.resources
+D:\workspace\C#\QuanAn\QuanAn\obj\Debug\QuanAn.csproj.GenerateResource.cache
+D:\workspace\C#\QuanAn\QuanAn\obj\Debug\QuanAn.csproj.CoreCompileInputs.cache
+D:\workspace\C#\QuanAn\QuanAn\obj\Debug\QuanAn.exe
+D:\workspace\C#\QuanAn\QuanAn\obj\Debug\QuanAn.pdb
+D:\workspace\C#\QuanAn\QuanAn\obj\Debug\QuanAn.fQuanlyBanHang.resources
+D:\workspace\C#\QuanAn\QuanAn\obj\Debug\QuanAn.UcQuanLy.resources
+D:\workspace\C#\QuanAn\QuanAn\obj\Debug\QuanAn.UcLogin.resources
+D:\workspace\C#\QuanAn\QuanAn\obj\Debug\QuanAn.UcDonHang.resources
+D:\workspace\C#\QuanAn\QuanAn\obj\Debug\QuanAn.UcDoanhThu.resources
+D:\workspace\C#\QuanAn\QuanAn\obj\Debug\QuanAn.UcThucDon.resources
