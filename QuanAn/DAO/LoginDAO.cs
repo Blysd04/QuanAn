@@ -21,18 +21,18 @@ namespace QuanAn.DAO
 
         public bool Login(string username, string password)
         {
-            string query = $"SELECT * FROM NhanVien WHERE Ten_dang_nhap = N'{username}' AND Mat_khau = N'{password}'";
+            string query = $"USP_Login @userName , @passWord";
             
-            DataTable result = DataProvider.Instance.ExecuteQuery(query);
+            DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { username, password});
 
             return result.Rows.Count > 0;   
         }
 
         public int Decentralization_Login(string  username, string password) 
         {
-            string query = $"SELECT * FROM NhanVien WHERE Ten_dang_nhap = N'{username}' AND Mat_khau = N'{password}'";
+            string query = $"USP_Login @userName , @passWord";
             
-            DataTable result = DataProvider.Instance.ExecuteQuery(query);
+            DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { username, password});
 
             if (result.Rows.Count > 0) // Kiểm tra có dòng kết quả hay không
             {

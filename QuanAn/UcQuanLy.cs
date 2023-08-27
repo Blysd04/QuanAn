@@ -1,4 +1,5 @@
 ﻿using QuanAn.DAO;
+using QuanAn.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,6 +20,15 @@ namespace QuanAn
         {
             InitializeComponent();
             instance = this;
+            LoadStaff();
+        }
+
+        void LoadStaff()
+        {
+            List<Staff> staffList = StaffDAO.Instance.LoadStaffList();
+            StaffDataGridView.DataSource = staffList;
+            CalendarDataGridView.DataSource = staffList;
+            SalaryDataGridView.DataSource = staffList;
         }
     }
 }
