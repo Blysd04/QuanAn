@@ -43,9 +43,7 @@
             this.label23 = new System.Windows.Forms.Label();
             this.FirstDateAtWorkDtp = new System.Windows.Forms.DateTimePicker();
             this.label22 = new System.Windows.Forms.Label();
-            this.PhoneNumberTb = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.StaffPositionTb = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.StaffNameTb = new System.Windows.Forms.TextBox();
             this.StaffIdTb = new System.Windows.Forms.TextBox();
@@ -84,6 +82,14 @@
             this.label20 = new System.Windows.Forms.Label();
             this.StaffSalaryPanel = new System.Windows.Forms.Panel();
             this.SalaryDataGridView = new System.Windows.Forms.DataGridView();
+            this.PositionPanel = new System.Windows.Forms.Panel();
+            this.ManagerRadioButton = new System.Windows.Forms.RadioButton();
+            this.StaffRadioButton = new System.Windows.Forms.RadioButton();
+            this.StatusPanel = new System.Windows.Forms.Panel();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.StillWorkingRadioButton = new System.Windows.Forms.RadioButton();
+            this.label2 = new System.Windows.Forms.Label();
+            this.TotalSalaryTb = new System.Windows.Forms.TextBox();
             this.StaffPage.SuspendLayout();
             this.StaffDisplayPanel.SuspendLayout();
             this.StaffPanel.SuspendLayout();
@@ -98,6 +104,8 @@
             this.StaffSalaryDisplayPanel.SuspendLayout();
             this.StaffSalaryPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SalaryDataGridView)).BeginInit();
+            this.PositionPanel.SuspendLayout();
+            this.StatusPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // StaffPage
@@ -126,6 +134,8 @@
             // StaffDisplayPanel
             // 
             this.StaffDisplayPanel.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.StaffDisplayPanel.Controls.Add(this.StatusPanel);
+            this.StaffDisplayPanel.Controls.Add(this.PositionPanel);
             this.StaffDisplayPanel.Controls.Add(this.AddStaffButton);
             this.StaffDisplayPanel.Controls.Add(this.EditStaffButton);
             this.StaffDisplayPanel.Controls.Add(this.textBox2);
@@ -138,9 +148,7 @@
             this.StaffDisplayPanel.Controls.Add(this.label23);
             this.StaffDisplayPanel.Controls.Add(this.FirstDateAtWorkDtp);
             this.StaffDisplayPanel.Controls.Add(this.label22);
-            this.StaffDisplayPanel.Controls.Add(this.PhoneNumberTb);
             this.StaffDisplayPanel.Controls.Add(this.label21);
-            this.StaffDisplayPanel.Controls.Add(this.StaffPositionTb);
             this.StaffDisplayPanel.Controls.Add(this.label14);
             this.StaffDisplayPanel.Controls.Add(this.StaffNameTb);
             this.StaffDisplayPanel.Controls.Add(this.StaffIdTb);
@@ -154,7 +162,7 @@
             // AddStaffButton
             // 
             this.AddStaffButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.AddStaffButton.Location = new System.Drawing.Point(195, 320);
+            this.AddStaffButton.Location = new System.Drawing.Point(195, 390);
             this.AddStaffButton.Name = "AddStaffButton";
             this.AddStaffButton.Size = new System.Drawing.Size(100, 59);
             this.AddStaffButton.TabIndex = 0;
@@ -164,7 +172,7 @@
             // EditStaffButton
             // 
             this.EditStaffButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.EditStaffButton.Location = new System.Drawing.Point(313, 320);
+            this.EditStaffButton.Location = new System.Drawing.Point(313, 390);
             this.EditStaffButton.Name = "EditStaffButton";
             this.EditStaffButton.Size = new System.Drawing.Size(100, 59);
             this.EditStaffButton.TabIndex = 2;
@@ -173,7 +181,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(148, 145);
+            this.textBox2.Location = new System.Drawing.Point(148, 215);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(265, 24);
             this.textBox2.TabIndex = 19;
@@ -189,21 +197,21 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(148, 215);
+            this.textBox1.Location = new System.Drawing.Point(148, 285);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(265, 24);
             this.textBox1.TabIndex = 17;
             // 
             // PasswordTb
             // 
-            this.PasswordTb.Location = new System.Drawing.Point(148, 285);
+            this.PasswordTb.Location = new System.Drawing.Point(148, 355);
             this.PasswordTb.Name = "PasswordTb";
             this.PasswordTb.Size = new System.Drawing.Size(265, 24);
             this.PasswordTb.TabIndex = 16;
             // 
             // UserNameTb
             // 
-            this.UserNameTb.Location = new System.Drawing.Point(148, 250);
+            this.UserNameTb.Location = new System.Drawing.Point(148, 320);
             this.UserNameTb.Name = "UserNameTb";
             this.UserNameTb.Size = new System.Drawing.Size(265, 24);
             this.UserNameTb.TabIndex = 15;
@@ -211,7 +219,7 @@
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(3, 285);
+            this.label25.Location = new System.Drawing.Point(3, 355);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(82, 18);
             this.label25.TabIndex = 14;
@@ -220,7 +228,7 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(3, 250);
+            this.label24.Location = new System.Drawing.Point(3, 320);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(123, 18);
             this.label24.TabIndex = 13;
@@ -229,7 +237,7 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(3, 215);
+            this.label23.Location = new System.Drawing.Point(3, 285);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(106, 18);
             this.label23.TabIndex = 11;
@@ -239,7 +247,7 @@
             // 
             this.FirstDateAtWorkDtp.CustomFormat = "yyyy-MM-dd";
             this.FirstDateAtWorkDtp.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.FirstDateAtWorkDtp.Location = new System.Drawing.Point(148, 180);
+            this.FirstDateAtWorkDtp.Location = new System.Drawing.Point(148, 250);
             this.FirstDateAtWorkDtp.Name = "FirstDateAtWorkDtp";
             this.FirstDateAtWorkDtp.Size = new System.Drawing.Size(265, 24);
             this.FirstDateAtWorkDtp.TabIndex = 10;
@@ -247,34 +255,20 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(3, 180);
+            this.label22.Location = new System.Drawing.Point(3, 250);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(133, 18);
             this.label22.TabIndex = 9;
             this.label22.Text = "Ngày đầu đi làm:";
             // 
-            // PhoneNumberTb
-            // 
-            this.PhoneNumberTb.Location = new System.Drawing.Point(148, 110);
-            this.PhoneNumberTb.Name = "PhoneNumberTb";
-            this.PhoneNumberTb.Size = new System.Drawing.Size(265, 24);
-            this.PhoneNumberTb.TabIndex = 8;
-            // 
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(3, 110);
+            this.label21.Location = new System.Drawing.Point(3, 215);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(112, 18);
             this.label21.TabIndex = 7;
             this.label21.Text = "Số điện thoại:";
-            // 
-            // StaffPositionTb
-            // 
-            this.StaffPositionTb.Location = new System.Drawing.Point(148, 75);
-            this.StaffPositionTb.Name = "StaffPositionTb";
-            this.StaffPositionTb.Size = new System.Drawing.Size(265, 24);
-            this.StaffPositionTb.TabIndex = 6;
             // 
             // label14
             // 
@@ -496,6 +490,8 @@
             // StaffSalaryDisplayPanel
             // 
             this.StaffSalaryDisplayPanel.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.StaffSalaryDisplayPanel.Controls.Add(this.TotalSalaryTb);
+            this.StaffSalaryDisplayPanel.Controls.Add(this.label2);
             this.StaffSalaryDisplayPanel.Controls.Add(this.EditSalaryButton);
             this.StaffSalaryDisplayPanel.Controls.Add(this.MonthInputNud);
             this.StaffSalaryDisplayPanel.Controls.Add(this.PenaltySalaryTb);
@@ -517,7 +513,7 @@
             // EditSalaryButton
             // 
             this.EditSalaryButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.EditSalaryButton.Location = new System.Drawing.Point(310, 215);
+            this.EditSalaryButton.Location = new System.Drawing.Point(310, 250);
             this.EditSalaryButton.Name = "EditSalaryButton";
             this.EditSalaryButton.Size = new System.Drawing.Size(100, 59);
             this.EditSalaryButton.TabIndex = 2;
@@ -642,6 +638,88 @@
             this.SalaryDataGridView.Size = new System.Drawing.Size(448, 573);
             this.SalaryDataGridView.TabIndex = 0;
             // 
+            // PositionPanel
+            // 
+            this.PositionPanel.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.PositionPanel.Controls.Add(this.StaffRadioButton);
+            this.PositionPanel.Controls.Add(this.ManagerRadioButton);
+            this.PositionPanel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.PositionPanel.Location = new System.Drawing.Point(148, 75);
+            this.PositionPanel.Name = "PositionPanel";
+            this.PositionPanel.Size = new System.Drawing.Size(265, 56);
+            this.PositionPanel.TabIndex = 20;
+            // 
+            // ManagerRadioButton
+            // 
+            this.ManagerRadioButton.AutoSize = true;
+            this.ManagerRadioButton.Location = new System.Drawing.Point(3, 3);
+            this.ManagerRadioButton.Name = "ManagerRadioButton";
+            this.ManagerRadioButton.Size = new System.Drawing.Size(86, 22);
+            this.ManagerRadioButton.TabIndex = 0;
+            this.ManagerRadioButton.TabStop = true;
+            this.ManagerRadioButton.Text = "Quản lý";
+            this.ManagerRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // StaffRadioButton
+            // 
+            this.StaffRadioButton.AutoSize = true;
+            this.StaffRadioButton.Location = new System.Drawing.Point(3, 31);
+            this.StaffRadioButton.Name = "StaffRadioButton";
+            this.StaffRadioButton.Size = new System.Drawing.Size(103, 22);
+            this.StaffRadioButton.TabIndex = 1;
+            this.StaffRadioButton.TabStop = true;
+            this.StaffRadioButton.Text = "Nhân viên";
+            this.StaffRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // StatusPanel
+            // 
+            this.StatusPanel.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.StatusPanel.Controls.Add(this.radioButton1);
+            this.StatusPanel.Controls.Add(this.StillWorkingRadioButton);
+            this.StatusPanel.Location = new System.Drawing.Point(148, 145);
+            this.StatusPanel.Name = "StatusPanel";
+            this.StatusPanel.Size = new System.Drawing.Size(265, 56);
+            this.StatusPanel.TabIndex = 21;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(3, 31);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(118, 22);
+            this.radioButton1.TabIndex = 1;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Đã nghỉ làm";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // StillWorkingRadioButton
+            // 
+            this.StillWorkingRadioButton.AutoSize = true;
+            this.StillWorkingRadioButton.Location = new System.Drawing.Point(3, 3);
+            this.StillWorkingRadioButton.Name = "StillWorkingRadioButton";
+            this.StillWorkingRadioButton.Size = new System.Drawing.Size(118, 22);
+            this.StillWorkingRadioButton.TabIndex = 0;
+            this.StillWorkingRadioButton.TabStop = true;
+            this.StillWorkingRadioButton.Text = "Đang đi làm";
+            this.StillWorkingRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(3, 215);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(97, 18);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "Tổng lương:";
+            // 
+            // TotalSalaryTb
+            // 
+            this.TotalSalaryTb.Location = new System.Drawing.Point(149, 215);
+            this.TotalSalaryTb.Name = "TotalSalaryTb";
+            this.TotalSalaryTb.ReadOnly = true;
+            this.TotalSalaryTb.Size = new System.Drawing.Size(264, 24);
+            this.TotalSalaryTb.TabIndex = 15;
+            // 
             // UcQuanLy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -669,6 +747,10 @@
             this.StaffSalaryDisplayPanel.PerformLayout();
             this.StaffSalaryPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.SalaryDataGridView)).EndInit();
+            this.PositionPanel.ResumeLayout(false);
+            this.PositionPanel.PerformLayout();
+            this.StatusPanel.ResumeLayout(false);
+            this.StatusPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -700,12 +782,10 @@
         public System.Windows.Forms.Panel StaffSalaryPanel; // panel
         private System.Windows.Forms.DataGridView SalaryDataGridView;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox StaffPositionTb;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.DateTimePicker FirstDateAtWorkDtp;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox PhoneNumberTb;
         private System.Windows.Forms.TextBox PasswordTb;
         private System.Windows.Forms.TextBox UserNameTb;
         private System.Windows.Forms.Label label25;
@@ -731,5 +811,13 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Panel PositionPanel;
+        private System.Windows.Forms.RadioButton StaffRadioButton;
+        private System.Windows.Forms.RadioButton ManagerRadioButton;
+        private System.Windows.Forms.Panel StatusPanel;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton StillWorkingRadioButton;
+        private System.Windows.Forms.TextBox TotalSalaryTb;
+        private System.Windows.Forms.Label label2;
     }
 }

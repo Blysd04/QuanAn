@@ -214,7 +214,7 @@
             this.CheckoutButton.Name = "CheckoutButton";
             this.CheckoutButton.Size = new System.Drawing.Size(128, 61);
             this.CheckoutButton.TabIndex = 13;
-            this.CheckoutButton.Text = "Thanh toán";
+            this.CheckoutButton.Text = "Chốt đơn";
             this.CheckoutButton.UseVisualStyleBackColor = true;
             this.CheckoutButton.Click += new System.EventHandler(this.CheckoutButton_Click);
             // 

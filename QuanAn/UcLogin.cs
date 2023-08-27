@@ -59,45 +59,36 @@ namespace QuanAn
             //fQuanlyBanHang.instance.p1.Enabled = true;
             string username = UserNameTb.Text;
             string password = PasswordTb.Text;
-            
-            if (Decentralization_Login(username, password) == 1)
+            if (username == "" || password == "")
             {
-                LoginStatus = true;
-                StatusLb.Text = "Đã đăng nhập thành công, tài khoản " + username;
-                StatusLb.ForeColor = Color.FromArgb(0, 0, 255);
-                fQuanlyBanHang.instance.accountLb.Text = "Tài khoản: " + username;
-                fQuanlyBanHang.instance.accountLb.ForeColor = Color.FromArgb(0, 0, 0);
-                fQuanlyBanHang.instance.StaffPanel1.Enabled = true;
-                fQuanlyBanHang.instance.UserPanel1.Enabled = true;
-            }
-            else if (Decentralization_Login(username, password) == 2)
-            {
-                LoginStatus = true;
-                StatusLb.Text = "Đã đăng nhập thành công, tài khoản " + username;
-                StatusLb.ForeColor = Color.FromArgb(0, 0, 255);
-                fQuanlyBanHang.instance.accountLb.Text = "Tài khoản: " + username;
-                fQuanlyBanHang.instance.accountLb.ForeColor = Color.FromArgb(0, 0, 0);
-                fQuanlyBanHang.instance.StaffPanel1.Enabled = true;
+                MessageBox.Show("Bạn đã nhập thiếu tài khoản hoặc mật khẩu!");
             }
             else
             {
-                MessageBox.Show("Sai tên tài khoản hoặc mật khẩu");
+                if (Decentralization_Login(username, password) == 1)
+                {
+                    LoginStatus = true;
+                    StatusLb.Text = "Đã đăng nhập thành công, tài khoản " + username;
+                    StatusLb.ForeColor = Color.FromArgb(0, 0, 255);
+                    fQuanlyBanHang.instance.accountLb.Text = "Tài khoản: " + username;
+                    fQuanlyBanHang.instance.accountLb.ForeColor = Color.FromArgb(0, 0, 0);
+                    fQuanlyBanHang.instance.StaffPanel1.Enabled = true;
+                    fQuanlyBanHang.instance.UserPanel1.Enabled = true;
+                }
+                else if (Decentralization_Login(username, password) == 2)
+                {
+                    LoginStatus = true;
+                    StatusLb.Text = "Đã đăng nhập thành công, tài khoản " + username;
+                    StatusLb.ForeColor = Color.FromArgb(0, 0, 255);
+                    fQuanlyBanHang.instance.accountLb.Text = "Tài khoản: " + username;
+                    fQuanlyBanHang.instance.accountLb.ForeColor = Color.FromArgb(0, 0, 0);
+                    fQuanlyBanHang.instance.StaffPanel1.Enabled = true;
+                }
+                else
+                {
+                    MessageBox.Show("Sai tên tài khoản hoặc mật khẩu");
+                }
             }
-
-            /*
-            if (Login(username, password))
-            {
-                LoginStatus = true;
-                StatusLb.Text = "Đã đăng nhập thành công, tài khoản " + username;
-                fQuanlyBanHang.instance.accountTb.Text = "Tài khoản: " + username;
-                fQuanlyBanHang.instance.StaffPanel1.Enabled = true;
-                fQuanlyBanHang.instance.UserPanel1.Enabled = true;
-            }
-            else
-            {
-                MessageBox.Show("Sai tên tài khoản hoặc mật khẩu");
-            }
-            */
         }
     }
 }
