@@ -31,6 +31,12 @@
             this.StaffPage = new System.Windows.Forms.TabPage();
             this.label13 = new System.Windows.Forms.Label();
             this.StaffDisplayPanel = new System.Windows.Forms.Panel();
+            this.StatusPanel = new System.Windows.Forms.Panel();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.StillWorkingRadioButton = new System.Windows.Forms.RadioButton();
+            this.PositionPanel = new System.Windows.Forms.Panel();
+            this.StaffRadioButton = new System.Windows.Forms.RadioButton();
+            this.ManagerRadioButton = new System.Windows.Forms.RadioButton();
             this.AddStaffButton = new System.Windows.Forms.Button();
             this.EditStaffButton = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -67,6 +73,8 @@
             this.SalaryPage = new System.Windows.Forms.TabPage();
             this.label17 = new System.Windows.Forms.Label();
             this.StaffSalaryDisplayPanel = new System.Windows.Forms.Panel();
+            this.TotalSalaryTb = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.EditSalaryButton = new System.Windows.Forms.Button();
             this.MonthInputNud = new System.Windows.Forms.DateTimePicker();
             this.PenaltySalaryTb = new System.Windows.Forms.TextBox();
@@ -82,16 +90,10 @@
             this.label20 = new System.Windows.Forms.Label();
             this.StaffSalaryPanel = new System.Windows.Forms.Panel();
             this.SalaryDataGridView = new System.Windows.Forms.DataGridView();
-            this.PositionPanel = new System.Windows.Forms.Panel();
-            this.ManagerRadioButton = new System.Windows.Forms.RadioButton();
-            this.StaffRadioButton = new System.Windows.Forms.RadioButton();
-            this.StatusPanel = new System.Windows.Forms.Panel();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.StillWorkingRadioButton = new System.Windows.Forms.RadioButton();
-            this.label2 = new System.Windows.Forms.Label();
-            this.TotalSalaryTb = new System.Windows.Forms.TextBox();
             this.StaffPage.SuspendLayout();
             this.StaffDisplayPanel.SuspendLayout();
+            this.StatusPanel.SuspendLayout();
+            this.PositionPanel.SuspendLayout();
             this.StaffPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.StaffDataGridView)).BeginInit();
             this.CalendarPage.SuspendLayout();
@@ -104,8 +106,6 @@
             this.StaffSalaryDisplayPanel.SuspendLayout();
             this.StaffSalaryPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SalaryDataGridView)).BeginInit();
-            this.PositionPanel.SuspendLayout();
-            this.StatusPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // StaffPage
@@ -158,6 +158,71 @@
             this.StaffDisplayPanel.Name = "StaffDisplayPanel";
             this.StaffDisplayPanel.Size = new System.Drawing.Size(426, 573);
             this.StaffDisplayPanel.TabIndex = 7;
+            // 
+            // StatusPanel
+            // 
+            this.StatusPanel.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.StatusPanel.Controls.Add(this.radioButton1);
+            this.StatusPanel.Controls.Add(this.StillWorkingRadioButton);
+            this.StatusPanel.Location = new System.Drawing.Point(148, 145);
+            this.StatusPanel.Name = "StatusPanel";
+            this.StatusPanel.Size = new System.Drawing.Size(265, 56);
+            this.StatusPanel.TabIndex = 21;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(3, 31);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(118, 22);
+            this.radioButton1.TabIndex = 1;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Đã nghỉ làm";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // StillWorkingRadioButton
+            // 
+            this.StillWorkingRadioButton.AutoSize = true;
+            this.StillWorkingRadioButton.Location = new System.Drawing.Point(3, 3);
+            this.StillWorkingRadioButton.Name = "StillWorkingRadioButton";
+            this.StillWorkingRadioButton.Size = new System.Drawing.Size(118, 22);
+            this.StillWorkingRadioButton.TabIndex = 0;
+            this.StillWorkingRadioButton.TabStop = true;
+            this.StillWorkingRadioButton.Text = "Đang đi làm";
+            this.StillWorkingRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // PositionPanel
+            // 
+            this.PositionPanel.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.PositionPanel.Controls.Add(this.StaffRadioButton);
+            this.PositionPanel.Controls.Add(this.ManagerRadioButton);
+            this.PositionPanel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.PositionPanel.Location = new System.Drawing.Point(148, 75);
+            this.PositionPanel.Name = "PositionPanel";
+            this.PositionPanel.Size = new System.Drawing.Size(265, 56);
+            this.PositionPanel.TabIndex = 20;
+            // 
+            // StaffRadioButton
+            // 
+            this.StaffRadioButton.AutoSize = true;
+            this.StaffRadioButton.Location = new System.Drawing.Point(3, 31);
+            this.StaffRadioButton.Name = "StaffRadioButton";
+            this.StaffRadioButton.Size = new System.Drawing.Size(103, 22);
+            this.StaffRadioButton.TabIndex = 1;
+            this.StaffRadioButton.TabStop = true;
+            this.StaffRadioButton.Text = "Nhân viên";
+            this.StaffRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // ManagerRadioButton
+            // 
+            this.ManagerRadioButton.AutoSize = true;
+            this.ManagerRadioButton.Location = new System.Drawing.Point(3, 3);
+            this.ManagerRadioButton.Name = "ManagerRadioButton";
+            this.ManagerRadioButton.Size = new System.Drawing.Size(86, 22);
+            this.ManagerRadioButton.TabIndex = 0;
+            this.ManagerRadioButton.TabStop = true;
+            this.ManagerRadioButton.Text = "Quản lý";
+            this.ManagerRadioButton.UseVisualStyleBackColor = true;
             // 
             // AddStaffButton
             // 
@@ -427,7 +492,7 @@
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(132, 84);
             this.label31.TabIndex = 5;
-            this.label31.Text = "Danh sách số ngày nhân viên đã đi làm:";
+            this.label31.Text = "Số ngày đã đi làm:";
             // 
             // StaffCalendarPanel
             // 
@@ -509,6 +574,23 @@
             this.StaffSalaryDisplayPanel.Name = "StaffSalaryDisplayPanel";
             this.StaffSalaryDisplayPanel.Size = new System.Drawing.Size(426, 573);
             this.StaffSalaryDisplayPanel.TabIndex = 7;
+            // 
+            // TotalSalaryTb
+            // 
+            this.TotalSalaryTb.Location = new System.Drawing.Point(149, 215);
+            this.TotalSalaryTb.Name = "TotalSalaryTb";
+            this.TotalSalaryTb.ReadOnly = true;
+            this.TotalSalaryTb.Size = new System.Drawing.Size(264, 24);
+            this.TotalSalaryTb.TabIndex = 15;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(3, 215);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(97, 18);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "Tổng lương:";
             // 
             // EditSalaryButton
             // 
@@ -638,88 +720,6 @@
             this.SalaryDataGridView.Size = new System.Drawing.Size(448, 573);
             this.SalaryDataGridView.TabIndex = 0;
             // 
-            // PositionPanel
-            // 
-            this.PositionPanel.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.PositionPanel.Controls.Add(this.StaffRadioButton);
-            this.PositionPanel.Controls.Add(this.ManagerRadioButton);
-            this.PositionPanel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.PositionPanel.Location = new System.Drawing.Point(148, 75);
-            this.PositionPanel.Name = "PositionPanel";
-            this.PositionPanel.Size = new System.Drawing.Size(265, 56);
-            this.PositionPanel.TabIndex = 20;
-            // 
-            // ManagerRadioButton
-            // 
-            this.ManagerRadioButton.AutoSize = true;
-            this.ManagerRadioButton.Location = new System.Drawing.Point(3, 3);
-            this.ManagerRadioButton.Name = "ManagerRadioButton";
-            this.ManagerRadioButton.Size = new System.Drawing.Size(86, 22);
-            this.ManagerRadioButton.TabIndex = 0;
-            this.ManagerRadioButton.TabStop = true;
-            this.ManagerRadioButton.Text = "Quản lý";
-            this.ManagerRadioButton.UseVisualStyleBackColor = true;
-            // 
-            // StaffRadioButton
-            // 
-            this.StaffRadioButton.AutoSize = true;
-            this.StaffRadioButton.Location = new System.Drawing.Point(3, 31);
-            this.StaffRadioButton.Name = "StaffRadioButton";
-            this.StaffRadioButton.Size = new System.Drawing.Size(103, 22);
-            this.StaffRadioButton.TabIndex = 1;
-            this.StaffRadioButton.TabStop = true;
-            this.StaffRadioButton.Text = "Nhân viên";
-            this.StaffRadioButton.UseVisualStyleBackColor = true;
-            // 
-            // StatusPanel
-            // 
-            this.StatusPanel.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.StatusPanel.Controls.Add(this.radioButton1);
-            this.StatusPanel.Controls.Add(this.StillWorkingRadioButton);
-            this.StatusPanel.Location = new System.Drawing.Point(148, 145);
-            this.StatusPanel.Name = "StatusPanel";
-            this.StatusPanel.Size = new System.Drawing.Size(265, 56);
-            this.StatusPanel.TabIndex = 21;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(3, 31);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(118, 22);
-            this.radioButton1.TabIndex = 1;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Đã nghỉ làm";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // StillWorkingRadioButton
-            // 
-            this.StillWorkingRadioButton.AutoSize = true;
-            this.StillWorkingRadioButton.Location = new System.Drawing.Point(3, 3);
-            this.StillWorkingRadioButton.Name = "StillWorkingRadioButton";
-            this.StillWorkingRadioButton.Size = new System.Drawing.Size(118, 22);
-            this.StillWorkingRadioButton.TabIndex = 0;
-            this.StillWorkingRadioButton.TabStop = true;
-            this.StillWorkingRadioButton.Text = "Đang đi làm";
-            this.StillWorkingRadioButton.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 215);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 18);
-            this.label2.TabIndex = 14;
-            this.label2.Text = "Tổng lương:";
-            // 
-            // TotalSalaryTb
-            // 
-            this.TotalSalaryTb.Location = new System.Drawing.Point(149, 215);
-            this.TotalSalaryTb.Name = "TotalSalaryTb";
-            this.TotalSalaryTb.ReadOnly = true;
-            this.TotalSalaryTb.Size = new System.Drawing.Size(264, 24);
-            this.TotalSalaryTb.TabIndex = 15;
-            // 
             // UcQuanLy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -731,6 +731,10 @@
             this.StaffPage.PerformLayout();
             this.StaffDisplayPanel.ResumeLayout(false);
             this.StaffDisplayPanel.PerformLayout();
+            this.StatusPanel.ResumeLayout(false);
+            this.StatusPanel.PerformLayout();
+            this.PositionPanel.ResumeLayout(false);
+            this.PositionPanel.PerformLayout();
             this.StaffPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.StaffDataGridView)).EndInit();
             this.CalendarPage.ResumeLayout(false);
@@ -747,10 +751,6 @@
             this.StaffSalaryDisplayPanel.PerformLayout();
             this.StaffSalaryPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.SalaryDataGridView)).EndInit();
-            this.PositionPanel.ResumeLayout(false);
-            this.PositionPanel.PerformLayout();
-            this.StatusPanel.ResumeLayout(false);
-            this.StatusPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
