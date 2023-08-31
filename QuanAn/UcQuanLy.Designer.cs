@@ -90,6 +90,9 @@
             this.label20 = new System.Windows.Forms.Label();
             this.StaffSalaryPanel = new System.Windows.Forms.Panel();
             this.SalaryDataGridView = new System.Windows.Forms.DataGridView();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.StaffPage.SuspendLayout();
             this.StaffDisplayPanel.SuspendLayout();
             this.StatusPanel.SuspendLayout();
@@ -110,6 +113,7 @@
             // 
             // StaffPage
             // 
+            this.StaffPage.Controls.Add(this.checkBox2);
             this.StaffPage.Controls.Add(this.label13);
             this.StaffPage.Controls.Add(this.StaffDisplayPanel);
             this.StaffPage.Controls.Add(this.StaffPanel);
@@ -154,9 +158,9 @@
             this.StaffDisplayPanel.Controls.Add(this.StaffIdTb);
             this.StaffDisplayPanel.Controls.Add(this.label15);
             this.StaffDisplayPanel.Controls.Add(this.label16);
-            this.StaffDisplayPanel.Location = new System.Drawing.Point(460, 30);
+            this.StaffDisplayPanel.Location = new System.Drawing.Point(460, 29);
             this.StaffDisplayPanel.Name = "StaffDisplayPanel";
-            this.StaffDisplayPanel.Size = new System.Drawing.Size(426, 573);
+            this.StaffDisplayPanel.Size = new System.Drawing.Size(426, 554);
             this.StaffDisplayPanel.TabIndex = 7;
             // 
             // StatusPanel
@@ -380,9 +384,9 @@
             // StaffPanel
             // 
             this.StaffPanel.Controls.Add(this.StaffDataGridView);
-            this.StaffPanel.Location = new System.Drawing.Point(6, 30);
+            this.StaffPanel.Location = new System.Drawing.Point(6, 29);
             this.StaffPanel.Name = "StaffPanel";
-            this.StaffPanel.Size = new System.Drawing.Size(448, 573);
+            this.StaffPanel.Size = new System.Drawing.Size(448, 554);
             this.StaffPanel.TabIndex = 5;
             // 
             // StaffDataGridView
@@ -393,11 +397,12 @@
             this.StaffDataGridView.Name = "StaffDataGridView";
             this.StaffDataGridView.RowHeadersWidth = 51;
             this.StaffDataGridView.RowTemplate.Height = 24;
-            this.StaffDataGridView.Size = new System.Drawing.Size(448, 573);
+            this.StaffDataGridView.Size = new System.Drawing.Size(448, 554);
             this.StaffDataGridView.TabIndex = 0;
             // 
             // CalendarPage
             // 
+            this.CalendarPage.Controls.Add(this.checkBox1);
             this.CalendarPage.Controls.Add(this.label29);
             this.CalendarPage.Controls.Add(this.StaffCalendarDisplayPanel);
             this.CalendarPage.Controls.Add(this.StaffCalendarPanel);
@@ -431,7 +436,7 @@
             this.StaffCalendarDisplayPanel.Controls.Add(this.label31);
             this.StaffCalendarDisplayPanel.Location = new System.Drawing.Point(460, 29);
             this.StaffCalendarDisplayPanel.Name = "StaffCalendarDisplayPanel";
-            this.StaffCalendarDisplayPanel.Size = new System.Drawing.Size(426, 574);
+            this.StaffCalendarDisplayPanel.Size = new System.Drawing.Size(426, 554);
             this.StaffCalendarDisplayPanel.TabIndex = 1;
             // 
             // AddStaffToCalendarButton
@@ -500,7 +505,7 @@
             this.StaffCalendarPanel.Controls.Add(this.CalendarDataGridView);
             this.StaffCalendarPanel.Location = new System.Drawing.Point(6, 29);
             this.StaffCalendarPanel.Name = "StaffCalendarPanel";
-            this.StaffCalendarPanel.Size = new System.Drawing.Size(448, 574);
+            this.StaffCalendarPanel.Size = new System.Drawing.Size(448, 554);
             this.StaffCalendarPanel.TabIndex = 0;
             // 
             // CalendarDataGridView
@@ -511,7 +516,7 @@
             this.CalendarDataGridView.Name = "CalendarDataGridView";
             this.CalendarDataGridView.RowHeadersWidth = 51;
             this.CalendarDataGridView.RowTemplate.Height = 24;
-            this.CalendarDataGridView.Size = new System.Drawing.Size(448, 574);
+            this.CalendarDataGridView.Size = new System.Drawing.Size(448, 554);
             this.CalendarDataGridView.TabIndex = 0;
             // 
             // tabControl1
@@ -531,6 +536,7 @@
             // 
             // SalaryPage
             // 
+            this.SalaryPage.Controls.Add(this.checkBox3);
             this.SalaryPage.Controls.Add(this.label17);
             this.SalaryPage.Controls.Add(this.StaffSalaryDisplayPanel);
             this.SalaryPage.Controls.Add(this.StaffSalaryPanel);
@@ -570,9 +576,9 @@
             this.StaffSalaryDisplayPanel.Controls.Add(this.label18);
             this.StaffSalaryDisplayPanel.Controls.Add(this.label19);
             this.StaffSalaryDisplayPanel.Controls.Add(this.label20);
-            this.StaffSalaryDisplayPanel.Location = new System.Drawing.Point(460, 30);
+            this.StaffSalaryDisplayPanel.Location = new System.Drawing.Point(460, 29);
             this.StaffSalaryDisplayPanel.Name = "StaffSalaryDisplayPanel";
-            this.StaffSalaryDisplayPanel.Size = new System.Drawing.Size(426, 573);
+            this.StaffSalaryDisplayPanel.Size = new System.Drawing.Size(426, 554);
             this.StaffSalaryDisplayPanel.TabIndex = 7;
             // 
             // TotalSalaryTb
@@ -704,9 +710,9 @@
             // StaffSalaryPanel
             // 
             this.StaffSalaryPanel.Controls.Add(this.SalaryDataGridView);
-            this.StaffSalaryPanel.Location = new System.Drawing.Point(6, 30);
+            this.StaffSalaryPanel.Location = new System.Drawing.Point(6, 29);
             this.StaffSalaryPanel.Name = "StaffSalaryPanel";
-            this.StaffSalaryPanel.Size = new System.Drawing.Size(448, 573);
+            this.StaffSalaryPanel.Size = new System.Drawing.Size(448, 554);
             this.StaffSalaryPanel.TabIndex = 5;
             // 
             // SalaryDataGridView
@@ -717,8 +723,38 @@
             this.SalaryDataGridView.Name = "SalaryDataGridView";
             this.SalaryDataGridView.RowHeadersWidth = 51;
             this.SalaryDataGridView.RowTemplate.Height = 24;
-            this.SalaryDataGridView.Size = new System.Drawing.Size(448, 573);
+            this.SalaryDataGridView.Size = new System.Drawing.Size(448, 554);
             this.SalaryDataGridView.TabIndex = 0;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(6, 584);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(225, 22);
+            this.checkBox1.TabIndex = 10;
+            this.checkBox1.Text = "Lọc nhân viên đang đi làm";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(6, 584);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(225, 22);
+            this.checkBox2.TabIndex = 11;
+            this.checkBox2.Text = "Lọc nhân viên đang đi làm";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Location = new System.Drawing.Point(6, 584);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(225, 22);
+            this.checkBox3.TabIndex = 11;
+            this.checkBox3.Text = "Lọc nhân viên đang đi làm";
+            this.checkBox3.UseVisualStyleBackColor = true;
             // 
             // UcQuanLy
             // 
@@ -819,5 +855,8 @@
         private System.Windows.Forms.RadioButton StillWorkingRadioButton;
         private System.Windows.Forms.TextBox TotalSalaryTb;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox checkBox3;
     }
 }

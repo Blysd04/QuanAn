@@ -109,6 +109,7 @@
             this.PasswordTb.PasswordChar = '*';
             this.PasswordTb.Size = new System.Drawing.Size(503, 30);
             this.PasswordTb.TabIndex = 2;
+            this.PasswordTb.Text = "12345";
             // 
             // PasswordLb
             // 
@@ -136,6 +137,7 @@
             this.UserNameTb.Name = "UserNameTb";
             this.UserNameTb.Size = new System.Drawing.Size(503, 30);
             this.UserNameTb.TabIndex = 1;
+            this.UserNameTb.Text = "pchuy";
             // 
             // UserNameLb
             // 

@@ -30,6 +30,11 @@
         {
             this.OrderDisplayPanel = new System.Windows.Forms.Panel();
             this.OrderLv = new System.Windows.Forms.ListView();
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label1 = new System.Windows.Forms.Label();
             this.MenuOrderDisplayPanel = new System.Windows.Forms.Panel();
             this.NoteTb = new System.Windows.Forms.TextBox();
@@ -42,7 +47,7 @@
             this.FoodNameLb = new System.Windows.Forms.Label();
             this.OrderFunctionPanel = new System.Windows.Forms.Panel();
             this.CheckoutButton = new System.Windows.Forms.Button();
-            this.ChageTb = new System.Windows.Forms.TextBox();
+            this.ChangeTb = new System.Windows.Forms.TextBox();
             this.MoneyGivingByCustomerTb = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -51,6 +56,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.MenuOrderPanel = new System.Windows.Forms.Panel();
             this.MenuLv = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.OrderDisplayPanel.SuspendLayout();
             this.MenuOrderDisplayPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AmountOfFoodNud)).BeginInit();
@@ -68,14 +76,50 @@
             // 
             // OrderLv
             // 
+            this.OrderLv.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5,
+            this.columnHeader6,
+            this.columnHeader7,
+            this.columnHeader8});
             this.OrderLv.Dock = System.Windows.Forms.DockStyle.Fill;
             this.OrderLv.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OrderLv.FullRowSelect = true;
+            this.OrderLv.GridLines = true;
             this.OrderLv.HideSelection = false;
             this.OrderLv.Location = new System.Drawing.Point(0, 0);
             this.OrderLv.Name = "OrderLv";
             this.OrderLv.Size = new System.Drawing.Size(494, 307);
             this.OrderLv.TabIndex = 0;
             this.OrderLv.UseCompatibleStateImageBehavior = false;
+            this.OrderLv.View = System.Windows.Forms.View.Details;
+            this.OrderLv.SelectedIndexChanged += new System.EventHandler(this.OrderLv_SelectedIndexChanged);
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Tên món";
+            this.columnHeader3.Width = 90;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Đơn giá";
+            this.columnHeader4.Width = 90;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Số lượng";
+            this.columnHeader5.Width = 90;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Ghi chú";
+            this.columnHeader6.Width = 90;
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "Thành tiền";
+            this.columnHeader7.Width = 90;
             // 
             // label1
             // 
@@ -111,6 +155,7 @@
             this.NoteTb.Name = "NoteTb";
             this.NoteTb.Size = new System.Drawing.Size(399, 78);
             this.NoteTb.TabIndex = 8;
+            this.NoteTb.Text = "Không có ghi chú";
             // 
             // label6
             // 
@@ -132,6 +177,7 @@
             this.AddFoodButton.TabIndex = 4;
             this.AddFoodButton.Text = "Thêm món";
             this.AddFoodButton.UseVisualStyleBackColor = true;
+            this.AddFoodButton.Click += new System.EventHandler(this.AddFoodButton_Click);
             // 
             // DeleteButton
             // 
@@ -143,6 +189,7 @@
             this.DeleteButton.TabIndex = 6;
             this.DeleteButton.Text = " Xóa  món";
             this.DeleteButton.UseVisualStyleBackColor = true;
+            this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
             // 
             // AmountOfFoodNud
             // 
@@ -194,7 +241,7 @@
             // 
             this.OrderFunctionPanel.BackColor = System.Drawing.SystemColors.ControlLight;
             this.OrderFunctionPanel.Controls.Add(this.CheckoutButton);
-            this.OrderFunctionPanel.Controls.Add(this.ChageTb);
+            this.OrderFunctionPanel.Controls.Add(this.ChangeTb);
             this.OrderFunctionPanel.Controls.Add(this.MoneyGivingByCustomerTb);
             this.OrderFunctionPanel.Controls.Add(this.label5);
             this.OrderFunctionPanel.Controls.Add(this.label4);
@@ -218,13 +265,15 @@
             this.CheckoutButton.UseVisualStyleBackColor = true;
             this.CheckoutButton.Click += new System.EventHandler(this.CheckoutButton_Click);
             // 
-            // ChageTb
+            // ChangeTb
             // 
-            this.ChageTb.Location = new System.Drawing.Point(107, 70);
-            this.ChageTb.Name = "ChageTb";
-            this.ChageTb.ReadOnly = true;
-            this.ChageTb.Size = new System.Drawing.Size(237, 24);
-            this.ChageTb.TabIndex = 11;
+            this.ChangeTb.Location = new System.Drawing.Point(107, 70);
+            this.ChangeTb.Name = "ChangeTb";
+            this.ChangeTb.ReadOnly = true;
+            this.ChangeTb.Size = new System.Drawing.Size(237, 24);
+            this.ChangeTb.TabIndex = 11;
+            this.ChangeTb.Text = "0";
+            this.ChangeTb.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // MoneyGivingByCustomerTb
             // 
@@ -232,6 +281,9 @@
             this.MoneyGivingByCustomerTb.Name = "MoneyGivingByCustomerTb";
             this.MoneyGivingByCustomerTb.Size = new System.Drawing.Size(237, 24);
             this.MoneyGivingByCustomerTb.TabIndex = 10;
+            this.MoneyGivingByCustomerTb.Text = "0";
+            this.MoneyGivingByCustomerTb.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.MoneyGivingByCustomerTb.TextChanged += new System.EventHandler(this.MoneyGivingByCustomerTb_TextChanged);
             // 
             // label5
             // 
@@ -260,6 +312,8 @@
             this.TotalMoneyTb.ReadOnly = true;
             this.TotalMoneyTb.Size = new System.Drawing.Size(237, 24);
             this.TotalMoneyTb.TabIndex = 7;
+            this.TotalMoneyTb.Text = "0";
+            this.TotalMoneyTb.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label3
             // 
@@ -291,13 +345,34 @@
             // 
             // MenuLv
             // 
+            this.MenuLv.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2});
             this.MenuLv.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MenuLv.FullRowSelect = true;
+            this.MenuLv.GridLines = true;
             this.MenuLv.HideSelection = false;
             this.MenuLv.Location = new System.Drawing.Point(0, 0);
             this.MenuLv.Name = "MenuLv";
             this.MenuLv.Size = new System.Drawing.Size(389, 610);
             this.MenuLv.TabIndex = 0;
             this.MenuLv.UseCompatibleStateImageBehavior = false;
+            this.MenuLv.View = System.Windows.Forms.View.Details;
+            this.MenuLv.SelectedIndexChanged += new System.EventHandler(this.MenuLv_SelectedIndexChanged);
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Tên món";
+            this.columnHeader1.Width = 150;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Đơn giá";
+            this.columnHeader2.Width = 150;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "MaCTHD";
             // 
             // UcDonHang
             // 
@@ -337,7 +412,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ListView OrderLv;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox ChageTb;
+        private System.Windows.Forms.TextBox ChangeTb;
         private System.Windows.Forms.TextBox MoneyGivingByCustomerTb;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
@@ -347,5 +422,13 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel MenuOrderPanel;
         private System.Windows.Forms.ListView MenuLv;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
+        private System.Windows.Forms.ColumnHeader columnHeader8;
     }
 }

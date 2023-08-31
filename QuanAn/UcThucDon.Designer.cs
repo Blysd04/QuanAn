@@ -63,6 +63,7 @@
             0,
             0});
             this.PriceNud.Name = "PriceNud";
+            this.PriceNud.ReadOnly = true;
             this.PriceNud.Size = new System.Drawing.Size(290, 24);
             this.PriceNud.TabIndex = 5;
             // 
@@ -95,6 +96,7 @@
             // 
             this.FoodNameTb.Location = new System.Drawing.Point(123, 40);
             this.FoodNameTb.Name = "FoodNameTb";
+            this.FoodNameTb.ReadOnly = true;
             this.FoodNameTb.Size = new System.Drawing.Size(290, 24);
             this.FoodNameTb.TabIndex = 4;
             // 
@@ -158,6 +160,7 @@
             this.EditFoodButton.TabIndex = 2;
             this.EditFoodButton.Text = "Sửa";
             this.EditFoodButton.UseVisualStyleBackColor = true;
+            this.EditFoodButton.Click += new System.EventHandler(this.EditFoodButton_Click);
             // 
             // DeleteFoodButton
             // 
@@ -169,6 +172,7 @@
             this.DeleteFoodButton.TabIndex = 1;
             this.DeleteFoodButton.Text = "Xóa";
             this.DeleteFoodButton.UseVisualStyleBackColor = true;
+            this.DeleteFoodButton.Click += new System.EventHandler(this.DeleteFoodButton_Click);
             // 
             // AddFoodButton
             // 
@@ -180,6 +184,7 @@
             this.AddFoodButton.TabIndex = 0;
             this.AddFoodButton.Text = "Thêm";
             this.AddFoodButton.UseVisualStyleBackColor = true;
+            this.AddFoodButton.Click += new System.EventHandler(this.AddFoodButton_Click);
             // 
             // MenuPanel
             // 
@@ -200,6 +205,7 @@
             this.FoodDataGridView.Size = new System.Drawing.Size(448, 610);
             this.FoodDataGridView.StandardTab = true;
             this.FoodDataGridView.TabIndex = 0;
+            this.FoodDataGridView.SelectionChanged += new System.EventHandler(this.FoodDataGridView_SelectionChanged);
             // 
             // UcThucDon
             // 
