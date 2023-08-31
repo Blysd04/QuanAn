@@ -51,6 +51,8 @@
             this.OrderTb = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.OrderRevenuePanel = new System.Windows.Forms.Panel();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.OrderDataGridView)).BeginInit();
             this.OrderFunctionPanel.SuspendLayout();
             this.OrderDisplayPanel.SuspendLayout();
@@ -67,6 +69,7 @@
             this.OrderDataGridView.RowTemplate.Height = 24;
             this.OrderDataGridView.Size = new System.Drawing.Size(448, 411);
             this.OrderDataGridView.TabIndex = 0;
+            this.OrderDataGridView.SelectionChanged += new System.EventHandler(this.OrderDataGridView_SelectionChanged);
             // 
             // OrderFunctionPanel
             // 
@@ -113,6 +116,7 @@
             this.CalculateRevenueByDayButton.TabIndex = 12;
             this.CalculateRevenueByDayButton.Text = "Tổng hợp doanh thu theo ngày";
             this.CalculateRevenueByDayButton.UseVisualStyleBackColor = true;
+            this.CalculateRevenueByDayButton.Click += new System.EventHandler(this.CalculateRevenueByDayButton_Click);
             // 
             // CalculateRevenueByMonthButton
             // 
@@ -124,6 +128,7 @@
             this.CalculateRevenueByMonthButton.TabIndex = 11;
             this.CalculateRevenueByMonthButton.Text = "Tổng hợp doanh thu theo tháng";
             this.CalculateRevenueByMonthButton.UseVisualStyleBackColor = true;
+            this.CalculateRevenueByMonthButton.Click += new System.EventHandler(this.CalculateRevenueByMonthButton_Click);
             // 
             // RevenueTb
             // 
@@ -246,12 +251,18 @@
             // 
             // FoodListLv
             // 
+            this.FoodListLv.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2});
+            this.FoodListLv.FullRowSelect = true;
+            this.FoodListLv.GridLines = true;
             this.FoodListLv.HideSelection = false;
             this.FoodListLv.Location = new System.Drawing.Point(146, 40);
             this.FoodListLv.Name = "FoodListLv";
             this.FoodListLv.Size = new System.Drawing.Size(269, 333);
             this.FoodListLv.TabIndex = 3;
             this.FoodListLv.UseCompatibleStateImageBehavior = false;
+            this.FoodListLv.View = System.Windows.Forms.View.Details;
             // 
             // label3
             // 
@@ -287,6 +298,16 @@
             this.OrderRevenuePanel.Name = "OrderRevenuePanel";
             this.OrderRevenuePanel.Size = new System.Drawing.Size(448, 411);
             this.OrderRevenuePanel.TabIndex = 6;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Tên món";
+            this.columnHeader1.Width = 145;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "MaMN";
+            this.columnHeader2.Width = 100;
             // 
             // UcDoanhThu
             // 
@@ -334,5 +355,7 @@
         private System.Windows.Forms.Panel OrderRevenuePanel;
         private System.Windows.Forms.TextBox NumberOfOrdersTb;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
     }
 }

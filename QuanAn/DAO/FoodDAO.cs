@@ -27,7 +27,7 @@ namespace QuanAn.DAO
             DateTime Today = DateTime.Now;
 
             Order order = OrderDAO.Instance.GetOrderWithIDMax();
-            if (order.Tien_thua != null)
+            if (order.Khach_dua != null)
                 DataProvider.Instance.ExecuteNonQuery("EXEC USP_CreateDonHang @maNV , @ngay", new object[] { 2, Today.ToString("yyyy-MM-dd") });
         }
         
@@ -59,6 +59,12 @@ namespace QuanAn.DAO
         public void UpdateFood(int maMN, string ten_mon, float don_gia)
         {
             DataProvider.Instance.ExecuteNonQuery($"EXEC USP_UpdateMon @maMN = {maMN}, @ten_mon = N'{ten_mon}', @don_gia = {don_gia}");
+        }
+        
+        public DataTable GetFoodListByMaDH(int maDH)
+        {
+            DataTable data = DataProvider.Instance.ExecuteQuery($"EXEC USP_GetFoodListByOrderId @maDH = {maDH}");
+            return data;
         }
 
         public List<Food> LoadFoodListByMaDH(int id)

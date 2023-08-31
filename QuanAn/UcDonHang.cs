@@ -108,6 +108,7 @@ namespace QuanAn
                     NoteTb.Text = "Không có ghi chú";
                     AmountOfFoodNud.Value = 1;
                     OrderLv.Items.Clear();
+                    FoodDAO.Instance.CreateNewOrder();
                 }
             }
         }
@@ -121,11 +122,6 @@ namespace QuanAn
             if (order != null && order.Khach_dua == 0)
             {
                 FoodDAO.Instance.AddFoodToOrder(order.MaDH, GetMaMN(), so_luong, ghi_chu, GetDonGia());
-            }
-            else
-            {
-                FoodDAO.Instance.CreateNewOrder();
-                //FoodDAO.Instance.AddFoodToOrder(order.MaDH, GetMaMN(), so_luong, ghi_chu, GetDonGia());
             }
             LoadOrderFood();
         }
